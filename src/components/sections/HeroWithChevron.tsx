@@ -30,13 +30,13 @@ const HeroWithChevron = ({
       {/* Teal Background for Content Area (Right 60%) */}
       <div className="absolute right-0 top-0 bottom-0 w-full md:w-[60%] bg-primary z-0" />
 
-      {/* Double-Angle Gold Chevron Overlay (Greater-than shape) - positioned at 35-50% */}
+      {/* Gold Chevron ">" Divider - single direction angle */}
       <div
         className="absolute top-0 bottom-0 bg-accent z-10 hidden md:block"
         style={{
-          left: "35%",
+          left: "30%",
           width: "20%",
-          clipPath: "polygon(0 0, 100% 0, 75% 50%, 100% 100%, 0 100%, 25% 50%)",
+          clipPath: "polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%)",
         }}
       />
 
