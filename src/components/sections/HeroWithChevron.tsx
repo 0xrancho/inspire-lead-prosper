@@ -33,20 +33,20 @@ const HeroWithChevron = ({
       {/* Double Chevron: small teal then large gold */}
       <svg
         className="absolute top-0 bottom-0 hidden md:block z-10"
-        style={{ left: "34%", width: "30%" }}
+        style={{ left: "38%", width: "24%" }}
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
         aria-hidden="true"
       >
-        <polygon points="0,0 32,0 52,50 32,100 0,100" fill="hsl(var(--primary))" />
-        <polygon points="32,0 95,0 100,50 95,100 32,100" fill="hsl(var(--accent))" />
+        <polygon points="0,0 18,0 36,50 18,100 0,100" fill="hsl(var(--primary))" />
+        <polygon points="18,0 96,0 100,50 96,100 18,100" fill="hsl(var(--accent))" />
       </svg>
 
       {/* Mobile: keep clean layout; no extra overlays */}
 
       {/* Content Section (Right 60%) */}
       <div className="container mx-auto px-6 relative z-20">
-        <div className="md:ml-[56%] md:pl-12 py-20">
+        <div className="md:ml-[54%] md:pl-12 py-20">
           <div className="max-w-2xl text-primary-foreground">
             <h1 className="mb-6">{title}</h1>
             {subtitle && <p className="text-2xl md:text-3xl font-heading mb-6">{subtitle}</p>}
