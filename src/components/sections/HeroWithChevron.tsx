@@ -30,18 +30,18 @@ const HeroWithChevron = ({
       {/* Arrow Divider - Navy and Gold Stripes */}
       <svg
         className="hidden md:block absolute top-0 h-full z-[1]"
-        style={{ left: "32%", width: "28%" }}
+        style={{ left: "28%", width: "12%" }}
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
       >
         {/* Dark Navy Stripe */}
         <polygon
-          points="0,0 8,0 20,50 8,100 0,100 4,50"
+          points="0,0 30,0 100,50 30,100 0,100 50,50"
           fill="hsl(195, 45%, 20%)"
         />
         {/* Gold/Yellow Stripe */}
         <polygon
-          points="8,0 80,0 100,50 80,100 8,100 20,50"
+          points="30,0 70,0 100,50 70,100 30,100 100,50"
           fill="hsl(var(--accent))"
         />
       </svg>
