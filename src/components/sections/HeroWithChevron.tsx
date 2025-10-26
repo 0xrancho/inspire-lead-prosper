@@ -36,12 +36,12 @@ const HeroWithChevron = ({
       >
         {/* Dark Navy Stripe */}
         <polygon
-          points="0,0 40,0 70,50 40,100 0,100 30,50"
+          points="0,0 8,0 20,50 8,100 0,100 4,50"
           fill="hsl(195, 45%, 20%)"
         />
         {/* Gold/Yellow Stripe */}
         <polygon
-          points="40,0 80,0 100,50 80,100 40,100 70,50"
+          points="8,0 80,0 100,50 80,100 8,100 20,50"
           fill="hsl(var(--accent))"
         />
       </svg>
