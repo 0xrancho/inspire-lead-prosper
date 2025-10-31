@@ -229,13 +229,15 @@ const FAQs = () => {
 
             {/* Diagonal Separator (except after last section) */}
             {sectionIndex < faqSections.length - 1 && (
-              <div className="relative h-16">
+              <div className="relative h-24 overflow-hidden">
                 <div
                   className={`absolute inset-0 ${
                     isEven ? "bg-accent" : "bg-background"
                   }`}
                   style={{
-                    clipPath: "polygon(0 0, 100% 0, 50% 100%)",
+                    clipPath: sectionIndex % 2 === 0 
+                      ? "polygon(0 0, 100% 100%, 0 100%)"  // Slope down-right
+                      : "polygon(0 100%, 100% 0, 100% 100%)", // Slope down-left
                   }}
                 />
               </div>
