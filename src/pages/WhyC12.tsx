@@ -4,6 +4,13 @@ import { Card } from "@/components/ui/card";
 import HeroWithChevron from "@/components/sections/HeroWithChevron";
 import { CheckCircle2 } from "lucide-react";
 import indySkyline from "@/assets/indy-skyline.png";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import c12Discussion from "@/assets/c12-forums-discussion.jpeg";
 
 const WhyC12 = () => {
   return (
@@ -105,42 +112,66 @@ const WhyC12 = () => {
       </section>
 
       {/* Impact and Benefits */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-[hsl(var(--teal))]">
         <div className="container mx-auto px-6">
-          <h2 className="text-center mb-16">Impact and Benefits</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                title: "Exclusive Peer Advisory",
-                description:
-                  "Engage in candid, faith-based discussions with peers who understand the unique challenges of integrating faith and business.",
-              },
-              {
-                title: "Action-Oriented Learning",
-                description:
-                  "Leave every meeting with concrete steps to improve both your business operations and personal life.",
-              },
-              {
-                title: "Focus 60 Meetings",
-                description:
-                  "Between each monthly forum, receive monthly 1:1 mentorship and coaching from our Principal Chair.",
-              },
-              {
-                title: "Community and Support",
-                description:
-                  "Connect with a diverse group of Christian leaders who are committed to helping each other succeed.",
-              },
-              {
-                title: "Personal and Professional",
-                description:
-                  "From actionable business insights to spiritual enrichment, our members experience comprehensive growth.",
-              },
-            ].map((benefit, index) => (
-              <Card key={index} className="p-8">
-                <h3 className="text-2xl mb-4">{benefit.title}</h3>
-                <p>{benefit.description}</p>
-              </Card>
-            ))}
+          <h2 className="text-center mb-16 text-white">Impact and Benefits</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto items-start">
+            <div>
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="focus-60" className="bg-white rounded-lg border-none">
+                  <AccordionTrigger className="px-6 hover:no-underline">
+                    <span className="text-xl font-heading">Focus 60 Meetings</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    Between each monthly forum, receive monthly 1:1 mentorship and coaching from our Principal Chair.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="personal-professional" className="bg-white rounded-lg border-none">
+                  <AccordionTrigger className="px-6 hover:no-underline">
+                    <span className="text-xl font-heading">Personal and Professional</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    From actionable business insights to spiritual enrichment, our members experience comprehensive growth.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="peer-advisory" className="bg-white rounded-lg border-none">
+                  <AccordionTrigger className="px-6 hover:no-underline">
+                    <span className="text-xl font-heading">Exclusive Peer Advisory</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    Engage in candid, faith-based discussions with peers who understand the unique challenges of integrating faith and business.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="action-learning" className="bg-white rounded-lg border-none">
+                  <AccordionTrigger className="px-6 hover:no-underline">
+                    <span className="text-xl font-heading">Action-Oriented Learning</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    Leave every meeting with concrete steps to improve both your business operations and personal life.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="community" className="bg-white rounded-lg border-none">
+                  <AccordionTrigger className="px-6 hover:no-underline">
+                    <span className="text-xl font-heading">Community and Support</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    Connect with a diverse group of Christian leaders who are committed to helping each other succeed.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+            
+            <div className="hidden md:block">
+              <img 
+                src={c12Discussion} 
+                alt="C12 forum discussion" 
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
