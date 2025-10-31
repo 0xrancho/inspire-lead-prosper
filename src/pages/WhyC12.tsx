@@ -10,7 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import c12Discussion from "@/assets/c12-forums-discussion.jpeg";
+import c12Discussion from "@/assets/c12-forums-discussion.png";
 
 const WhyC12 = () => {
   return (
@@ -112,7 +112,7 @@ const WhyC12 = () => {
       </section>
 
       {/* Impact and Benefits */}
-      <section className="py-20 bg-[hsl(var(--teal))]">
+      <section className="py-20 bg-secondary">
         <div className="container mx-auto px-6">
           <h2 className="text-center mb-16 text-white">Impact and Benefits</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto items-start">
