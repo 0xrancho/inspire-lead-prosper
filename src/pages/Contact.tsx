@@ -50,18 +50,18 @@ const Contact = () => {
               connect you with a Chair to explore how C12 can serve you.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="grid md:grid-cols-2 gap-8 items-stretch">
               {/* Map Image */}
-              <div className="hidden md:block">
+              <div className="hidden md:flex">
                 <img 
                   src={indyMap} 
                   alt="C12 Indiana service area map" 
-                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                  className="w-full object-cover rounded-lg shadow-lg"
                 />
               </div>
 
               {/* Form */}
-              <form onSubmit={handleSubmit} className="space-y-6 bg-card p-8 rounded-lg shadow-lg">
+              <form onSubmit={handleSubmit} className="space-y-6 bg-card p-8 rounded-lg shadow-lg flex flex-col">
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="firstName">First Name *</Label>

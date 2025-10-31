@@ -53,10 +53,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
-          <p className="text-center text-sm opacity-50 mt-4">
-            Handcrafted with care
-          </p>
         </div>
       </div>
     </footer>
