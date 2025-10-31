@@ -67,8 +67,8 @@ const Resources = () => {
         </div>
       </section>
 
-      {/* Diagonal Separator */}
-      <div className="relative h-32 bg-accent" style={{ clipPath: 'polygon(0 50%, 100% 0, 100% 100%, 0 100%)' }} />
+      {/* Diagonal Separator - slopes up to the right */}
+      <div className="relative h-32 bg-accent" style={{ clipPath: 'polygon(0 100%, 100% 0, 100% 100%)' }} />
 
       {/* Resources Section */}
       <section className="bg-accent py-16">
@@ -98,6 +98,25 @@ const Resources = () => {
               </div>
             </Card>
           ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-background py-20">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <Card className="bg-primary text-primary-foreground border-0 rounded-xl p-12 text-center">
+            <h2 className="mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl mb-8 leading-relaxed">
+              Join a community of Christian business leaders committed to building businesses that honor God and serve others.
+            </p>
+            <Button
+              variant="default"
+              size="xl"
+              className="bg-accent text-accent-foreground hover:bg-accent/90"
+            >
+              Learn More About Membership
+            </Button>
+          </Card>
         </div>
       </section>
 
