@@ -123,24 +123,6 @@ const WhyC12 = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto items-start">
             <div>
               <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="focus-60" className="bg-white rounded-lg border-none">
-                  <AccordionTrigger className="px-6 hover:no-underline">
-                    <span className="text-xl font-heading">Focus 60 Meetings</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4">
-                    Between each monthly forum, receive monthly 1:1 mentorship and coaching from our Principal Chair.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="personal-professional" className="bg-white rounded-lg border-none">
-                  <AccordionTrigger className="px-6 hover:no-underline">
-                    <span className="text-xl font-heading">Personal and Professional</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4">
-                    From actionable business insights to spiritual enrichment, our members experience comprehensive growth.
-                  </AccordionContent>
-                </AccordionItem>
-
                 <AccordionItem value="peer-advisory" className="bg-white rounded-lg border-none">
                   <AccordionTrigger className="px-6 hover:no-underline">
                     <span className="text-xl font-heading">Exclusive Peer Advisory</span>
@@ -159,12 +141,30 @@ const WhyC12 = () => {
                   </AccordionContent>
                 </AccordionItem>
 
+                <AccordionItem value="focus-60" className="bg-white rounded-lg border-none">
+                  <AccordionTrigger className="px-6 hover:no-underline">
+                    <span className="text-xl font-heading">Focus 60 Meetings</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    Between each monthly forum, receive monthly 1:1 mentorship and coaching from our Principal Chair to help walk you through the processes of owning a business.
+                  </AccordionContent>
+                </AccordionItem>
+
                 <AccordionItem value="community" className="bg-white rounded-lg border-none">
                   <AccordionTrigger className="px-6 hover:no-underline">
                     <span className="text-xl font-heading">Community and Support</span>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4">
                     Connect with a diverse group of Christian leaders who are committed to helping each other succeed.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="personal-professional" className="bg-white rounded-lg border-none">
+                  <AccordionTrigger className="px-6 hover:no-underline">
+                    <span className="text-xl font-heading">Personal and Professional</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    From actionable business insights to spiritual enrichment, our members experience comprehensive growth.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
