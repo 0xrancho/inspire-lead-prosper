@@ -14,6 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import strategicPlanningGuide from "@/assets/strategic-planning-guide.webp";
 import survivalToSustainability from "@/assets/survival-to-sustainability.webp";
 import customerLoyaltyReferrals from "@/assets/customer-loyalty-referrals.png";
+import prayerGroupImage from "@/assets/c12-prayer-group.jpeg";
 
 const Resources = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -106,7 +107,13 @@ const Resources = () => {
       {/* CTA Section */}
       <section className="bg-background py-20">
         <div className="container mx-auto px-6 max-w-4xl">
-          <Card className="bg-primary text-primary-foreground border-0 rounded-xl p-12 text-center">
+          <div className="relative rounded-xl overflow-hidden">
+            <img 
+              src={prayerGroupImage} 
+              alt="C12 prayer group" 
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <Card className="relative bg-primary/90 text-primary-foreground border-0 p-12 text-center">
             <h2 className="mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl mb-8 leading-relaxed">
               Join a community of Christian business leaders committed to building businesses that honor God and serve others.
@@ -118,7 +125,8 @@ const Resources = () => {
             >
               Learn More About Membership
             </Button>
-          </Card>
+            </Card>
+          </div>
         </div>
       </section>
 
