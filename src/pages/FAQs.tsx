@@ -247,7 +247,7 @@ const FAQs = () => {
                   }`}
                   style={{
                     clipPath: sectionIndex === 3
-                      ? "polygon(0 100%, 100% 0, 0 0)"  // Key Players: slope up-right
+                      ? "polygon(0 0, 100% 0, 100% 100%)"  // Key Players: slope up-right
                       : sectionIndex % 2 === 0 
                         ? "polygon(0 0, 100% 100%, 0 100%)"  // Slope down-right
                         : "polygon(0 100%, 100% 0, 100% 100%)", // Slope down-left
