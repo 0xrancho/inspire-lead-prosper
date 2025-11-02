@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Facebook, Linkedin, Youtube } from "lucide-react";
+import c12FooterLogo from "@/assets/C12_2.png";
 
 const Footer = () => {
   return (
@@ -43,14 +44,18 @@ const Footer = () => {
               </a>
             </div>
 
-            <div className="flex items-center gap-4 text-sm">
-              <Link to="/contact" className="hover:text-accent transition-colors">
-                Contact
-              </Link>
-              <span className="opacity-50">|</span>
-              <a href="#" className="hover:text-accent transition-colors">
-                Privacy
-              </a>
+            <div className="flex items-center gap-6">
+              <div className="flex items-center gap-4 text-sm">
+                <Link to="/contact" className="hover:text-accent transition-colors">
+                  Contact
+                </Link>
+                <span className="opacity-50">|</span>
+                <a href="#" className="hover:text-accent transition-colors">
+                  Privacy
+                </a>
+              </div>
+
+              <img src={c12FooterLogo} alt="C12 Logo" className="h-8 w-auto" />
             </div>
           </div>
         </div>
