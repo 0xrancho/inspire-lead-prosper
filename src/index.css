@@ -106,7 +106,7 @@ All colors MUST be HSL.
   }
   
   h1 {
-    @apply text-[55px] leading-tight;
+    @apply text-[32px] md:text-[55px] leading-tight;
   }
   
   h2 {

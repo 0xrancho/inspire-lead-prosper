@@ -67,9 +67,9 @@ const HeroWithChevron = ({
 
       {/* Mobile: Additional content below banner */}
       {(subtitle || description || children) && (
-        <section className="md:hidden pt-12 pb-6 px-6 bg-background">
+        <section className="md:hidden pt-16 pb-6 px-6 bg-background">
           <div className="max-w-2xl mx-auto">
-            {subtitle && <p className="text-2xl font-heading mb-6 text-primary">{subtitle}</p>}
+            {subtitle && <p className="text-2xl font-heading font-bold mb-6 text-accent">{subtitle}</p>}
             {description && <div className="mb-8 text-foreground">{description}</div>}
             {children && <div className="flex flex-wrap gap-4 justify-center [&_button]:bg-accent [&_button]:text-accent-foreground [&_button]:border-primary [&_button:hover]:bg-primary [&_button:hover]:text-primary-foreground">{children}</div>}
           </div>

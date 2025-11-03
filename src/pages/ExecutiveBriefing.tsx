@@ -46,11 +46,11 @@ const ExecutiveBriefing = () => {
       {/* Hero */}
       <HeroWithChevron
         title="Executive Briefing"
-        subtitle="Explore a 2 Hr Executive Briefing to see if C12 is the right place for you"
+        subtitle="Explore a 2 Hour Executive Briefing to see if C12 is right for you."
       />
 
       {/* Stats Block */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:pt-20 pt-8 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="mb-4">It Is Lonely At The Top</h2>
