@@ -19,9 +19,8 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Navigation />
       <main className="flex-1 pt-20 overflow-x-hidden">{children}</main>
-      <div className="mb-20">
-        <Footer />
-      </div>
+      <Footer />
+      <div className="h-24 md:h-20 bg-primary"></div>
 
       {/* Stationary Footer - Fixed at bottom */}
       <div className="fixed bottom-0 left-0 right-0 bg-primary text-primary-foreground py-4 px-6 shadow-lg z-40">
