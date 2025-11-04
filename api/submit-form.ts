@@ -94,17 +94,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
 
     // Send email with PDF if resourceDownloaded is set
+    console.log('Checking email sending conditions:', { resourceDownloaded, email, hasResourceDownloaded: !!resourceDownloaded, hasEmail: !!email });
+
     if (resourceDownloaded && email) {
+      console.log('Sending email for resource:', resourceDownloaded);
       try {
         const pdfFilename = resourcePdfMap[resourceDownloaded as string];
+        console.log('Mapped PDF filename:', pdfFilename);
 
         if (pdfFilename) {
           // Read the PDF file
           const pdfPath = path.join(process.cwd(), 'public', 'resources', pdfFilename);
-          const pdfBuffer = fs.readFileSync(pdfPath);
-          const pdfBase64 = pdfBuffer.toString('base64');
+          console.log('PDF path:', pdfPath);
 
-          await resend.emails.send({
+          const pdfBuffer = fs.readFileSync(pdfPath);
+          console.log('PDF buffer size:', pdfBuffer.length);
+
+          const pdfBase64 = pdfBuffer.toString('base64');
+          console.log('PDF base64 length:', pdfBase64.length);
+
+          console.log('Sending email via Resend...');
+          const emailResult = await resend.emails.send({
             from: process.env.EMAIL_FROM || 'onboarding@resend.dev',
             to: email as string,
             subject: `Your C12 Resource: ${resourceDownloaded}`,
@@ -131,11 +141,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
               },
             ],
           });
+          console.log('Email sent successfully!', emailResult);
+        } else {
+          console.log('No PDF filename mapped for resource:', resourceDownloaded);
         }
       } catch (emailError) {
         console.error('Error sending email:', emailError);
         // Don't fail the entire request if email fails
       }
+    } else {
+      console.log('Email sending skipped - missing resourceDownloaded or email');
     }
 
     return res.status(200).json({
