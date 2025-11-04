@@ -54,9 +54,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         'Email': {
           email: email,
         },
-        'Phone': {
-          phone_number: phone || '',
-        },
+        ...(phone ? {
+          'Phone': {
+            phone_number: phone,
+          },
+        } : {}),
         'Organization': {
           rich_text: [
             {
