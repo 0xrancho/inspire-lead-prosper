@@ -1,19 +1,13 @@
 import { Client } from '@notionhq/client';
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-export const config = {
-  runtime: 'edge',
-};
-
-export default async function handler(req: Request) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
-    return new Response(JSON.stringify({ error: 'Method not allowed' }), {
-      status: 405,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const body = await req.json();
+    const body = req.body;
     const {
       firstName,
       lastName,
@@ -90,21 +84,15 @@ export default async function handler(req: Request) {
     // TODO: Send email with PDF if resourceDownloaded is set
     // We'll implement this next
 
-    return new Response(
-      JSON.stringify({ success: true, message: 'Form submitted successfully' }),
-      {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-      }
-    );
+    return res.status(200).json({
+      success: true,
+      message: 'Form submitted successfully'
+    });
   } catch (error) {
     console.error('Error submitting form:', error);
-    return new Response(
-      JSON.stringify({ error: 'Failed to submit form' }),
-      {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' },
-      }
-    );
+    return res.status(500).json({
+      error: 'Failed to submit form',
+      details: error instanceof Error ? error.message : 'Unknown error'
+    });
   }
 }
