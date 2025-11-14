@@ -89,7 +89,7 @@ const Contact = () => {
                 <img
                   src={indyMap}
                   alt="C12 Indiana service area map"
-                  className="w-full object-cover rounded-tl-[2rem]"
+                  className="w-full object-cover rounded-tl-[2rem] border-4 border-white shadow-lg"
                 />
               </div>
 
