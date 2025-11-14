@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import HeroWithChevron from "@/components/sections/HeroWithChevron";
+import SchemaMarkup from "@/components/sections/SchemaMarkup";
 import { CheckCircle2, Linkedin } from "lucide-react";
 import whyc12Banner from "@/assets/Whyc12-banner.png";
 import c12Logo from "@/assets/C12_7.png";
@@ -19,6 +20,7 @@ import c12Discussion from "@/assets/c12-forums-discussion.png";
 const WhyC12 = () => {
   return (
     <div className="min-h-screen">
+      <SchemaMarkup />
       {/* Hero */}
       <HeroWithChevron
         backgroundImage={whyc12Banner}

@@ -7,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import HeroWithChevron from "@/components/sections/HeroWithChevron";
+import SchemaMarkup from "@/components/sections/SchemaMarkup";
 import prayerGroupImage from "@/assets/c12-prayer-group.jpeg";
 import forumsDiscussionImage from "@/assets/c12-forums-discussion.png";
 import faqBanner from "@/assets/FAQ-banner.png";
@@ -39,6 +40,14 @@ const FAQs = () => {
         {
           q: "What are the qualifications for membership?",
           a: "Members must be CEOs, business owners, or senior executives with decision-making authority, profess faith in Jesus Christ, and be committed to personal and business growth through biblical principles.",
+        },
+        {
+          q: "How is C12 different from Vistage or EO?",
+          a: "Unlike Vistage or EO (Entrepreneurs' Organization), C12 integrates biblical principles into every aspect of business strategy and leadership. While other groups focus solely on business performance, C12 members pursue both excellence and eternal impact, viewing their companies as ministry platforms. Every forum includes prayer, Scripture-based teaching, and accountability grounded in faith. This isn't business OR faith—it's both, fully integrated.",
+        },
+        {
+          q: "How is C12 different from other CEO peer groups?",
+          a: "C12 uniquely combines world-class business curriculum with biblical leadership principles. While we maintain the same high standards as secular peer groups—monthly forums, executive coaching, strategic planning—we add spiritual development, faith-based accountability, and a community united by Christian values. Our members don't compartmentalize faith and business; they lead with eternal perspective alongside strategic excellence.",
         },
       ],
     },
@@ -172,8 +181,17 @@ const FAQs = () => {
     },
   ];
 
+  // Flatten FAQ data for schema markup
+  const faqData = faqSections.flatMap(section =>
+    section.questions.map(q => ({
+      question: q.q,
+      answer: q.a
+    }))
+  );
+
   return (
     <div className="min-h-screen">
+      <SchemaMarkup type="faq" faqData={faqData} />
       {/* Hero */}
       <HeroWithChevron
         backgroundImage={faqBanner}

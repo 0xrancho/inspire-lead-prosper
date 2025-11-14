@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import HeroWithChevron from "@/components/sections/HeroWithChevron";
+import SchemaMarkup from "@/components/sections/SchemaMarkup";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle2 } from "lucide-react";
 import outcome96 from "@/assets/96-outcome.png";
@@ -40,6 +41,7 @@ const ExecutiveBriefing = () => {
         organization: formData.get('organization'),
         industry: formData.get('orgSize'), // Using orgSize field as industry placeholder
         experience: formData.get('experience'),
+        referralSource: formData.get('referralSource'),
         source: 'Executive Briefing',
       };
 
@@ -75,6 +77,7 @@ const ExecutiveBriefing = () => {
 
   return (
     <div className="min-h-screen">
+      <SchemaMarkup />
       {/* Hero */}
       <HeroWithChevron
         title="Executive Briefing"
@@ -93,13 +96,16 @@ const ExecutiveBriefing = () => {
 
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div>
-                <img src={outcome96} alt="96% outcome" className="w-full h-auto" />
+                <img src={outcome96} alt="96% of members would recommend C12" className="w-full h-auto" />
+                <span className="sr-only">96% of C12 members would recommend C12 to other Christian business leaders</span>
               </div>
               <div>
-                <img src={outcome78} alt="78% outcome" className="w-full h-auto" />
+                <img src={outcome78} alt="78% of members grew revenue" className="w-full h-auto" />
+                <span className="sr-only">78% of C12 members experienced revenue growth in their businesses</span>
               </div>
               <div>
-                <img src={outcome73} alt="73% outcome" className="w-full h-auto" />
+                <img src={outcome73} alt="73% of members improved business strategy" className="w-full h-auto" />
+                <span className="sr-only">73% of C12 members significantly improved their business strategy and planning</span>
               </div>
             </div>
           </div>
@@ -228,6 +234,25 @@ const ExecutiveBriefing = () => {
                     <SelectItem value="4-7">4-7 years</SelectItem>
                     <SelectItem value="8-15">8-15 years</SelectItem>
                     <SelectItem value="15+">15+ years</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div>
+                <Label htmlFor="referralSource">How did you hear about us? *</Label>
+                <Select name="referralSource" required>
+                  <SelectTrigger id="referralSource">
+                    <SelectValue placeholder="Select source" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Google search">Google search</SelectItem>
+                    <SelectItem value="AI assistant (ChatGPT, Claude, Perplexity)">AI assistant (ChatGPT, Claude, Perplexity)</SelectItem>
+                    <SelectItem value="Referred by C12 member">Referred by C12 member</SelectItem>
+                    <SelectItem value="LinkedIn">LinkedIn</SelectItem>
+                    <SelectItem value="Business associate/colleague">Business associate/colleague</SelectItem>
+                    <SelectItem value="Event or conference">Event or conference</SelectItem>
+                    <SelectItem value="Facebook/Social media">Facebook/Social media</SelectItem>
+                    <SelectItem value="Other">Other</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import HeroWithChevron from "@/components/sections/HeroWithChevron";
+import SchemaMarkup from "@/components/sections/SchemaMarkup";
 import heroBanner5 from "@/assets/hero-banner5.png";
 import outcome93 from "@/assets/93-outcome.png";
 import outcome79 from "@/assets/79-outcome.png";
@@ -46,6 +47,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      <SchemaMarkup />
       {/* Hero Section */}
       <HeroWithChevron
         backgroundImage={heroBanner5}
@@ -79,6 +81,8 @@ const Home = () => {
               C12 is the world's largest network of Christian CEOs, owners, and executives who meet monthly
               in peer advisory groups. Together, we sharpen one another through business excellence, biblical
               leadership, and eternal perspective—so we can build companies that bless people and honor God.
+              As of 2024, C12 Indianapolis serves business leaders throughout Central Indiana with monthly forums,
+              executive coaching, and a community of faith-driven entrepreneurs.
             </p>
 
             {/* YouTube Video */}
@@ -183,29 +187,36 @@ const Home = () => {
           {/* Top row - 4 circles */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-6">
             <div className="flex items-center justify-center p-1 rounded-full bg-primary">
-              <img src={outcome93} alt="93% outcome" className="w-full h-auto" />
+              <img src={outcome93} alt="93% of members report improved decision-making" className="w-full h-auto" />
+              <span className="sr-only">93% of C12 members report significantly improved decision-making capabilities as a result of membership</span>
             </div>
             <div className="flex items-center justify-center p-1 rounded-full bg-accent">
-              <img src={outcome79} alt="79% outcome" className="w-full h-auto" />
+              <img src={outcome79} alt="79% of members increased profitability" className="w-full h-auto" />
+              <span className="sr-only">79% of C12 members experienced increased profitability in their businesses</span>
             </div>
             <div className="flex items-center justify-center p-1 rounded-full bg-primary">
-              <img src={outcome82} alt="82% outcome" className="w-full h-auto" />
+              <img src={outcome82} alt="82% of members improved work-life balance" className="w-full h-auto" />
+              <span className="sr-only">82% of C12 members achieved improved work-life balance</span>
             </div>
             <div className="flex items-center justify-center p-1 rounded-full bg-accent">
-              <img src={outcome87} alt="87% outcome" className="w-full h-auto" />
+              <img src={outcome87} alt="87% of members strengthened company culture" className="w-full h-auto" />
+              <span className="sr-only">87% of C12 members strengthened their company culture and values</span>
             </div>
           </div>
 
           {/* Bottom row - 3 circles */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
             <div className="flex items-center justify-center p-1 rounded-full bg-primary">
-              <img src={outcome85} alt="85% outcome" className="w-full h-auto" />
+              <img src={outcome85} alt="85% of members improved leadership skills" className="w-full h-auto" />
+              <span className="sr-only">85% of C12 members improved their leadership skills and effectiveness</span>
             </div>
             <div className="flex items-center justify-center p-1 rounded-full bg-accent">
-              <img src={outcome78} alt="78% outcome" className="w-full h-auto" />
+              <img src={outcome78} alt="78% of members grew revenue" className="w-full h-auto" />
+              <span className="sr-only">78% of C12 members experienced revenue growth in their businesses</span>
             </div>
             <div className="flex items-center justify-center p-1 rounded-full bg-primary">
-              <img src={outcome96} alt="96% outcome" className="w-full h-auto" />
+              <img src={outcome96} alt="96% of members would recommend C12" className="w-full h-auto" />
+              <span className="sr-only">96% of C12 members would recommend C12 to other Christian business leaders</span>
             </div>
           </div>
 

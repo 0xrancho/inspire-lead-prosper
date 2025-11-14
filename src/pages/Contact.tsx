@@ -10,6 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import HeroWithChevron from "@/components/sections/HeroWithChevron";
+import SchemaMarkup from "@/components/sections/SchemaMarkup";
 import { useToast } from "@/hooks/use-toast";
 import indyMap from "@/assets/Indy-Ftwayne-map.png";
 import contactBanner from "@/assets/Contact-banner.png";
@@ -32,6 +33,7 @@ const Contact = () => {
         organization: formData.get('organization'),
         industry: formData.get('industry'),
         experience: formData.get('experience'),
+        referralSource: formData.get('referralSource'),
         source: 'Contact Form',
       };
 
@@ -67,6 +69,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SchemaMarkup />
       {/* Hero */}
       <HeroWithChevron
         backgroundImage={contactBanner}
@@ -155,6 +158,25 @@ const Contact = () => {
                     <SelectItem value="4-7">4-7 years</SelectItem>
                     <SelectItem value="8-15">8-15 years</SelectItem>
                     <SelectItem value="15+">15+ years</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div>
+                <Label htmlFor="referralSource">How did you hear about us? *</Label>
+                <Select name="referralSource" required>
+                  <SelectTrigger id="referralSource">
+                    <SelectValue placeholder="Select source" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Google search">Google search</SelectItem>
+                    <SelectItem value="AI assistant (ChatGPT, Claude, Perplexity)">AI assistant (ChatGPT, Claude, Perplexity)</SelectItem>
+                    <SelectItem value="Referred by C12 member">Referred by C12 member</SelectItem>
+                    <SelectItem value="LinkedIn">LinkedIn</SelectItem>
+                    <SelectItem value="Business associate/colleague">Business associate/colleague</SelectItem>
+                    <SelectItem value="Event or conference">Event or conference</SelectItem>
+                    <SelectItem value="Facebook/Social media">Facebook/Social media</SelectItem>
+                    <SelectItem value="Other">Other</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
